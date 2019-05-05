@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>envi_1418943034.kml</name>
+	<Style id="footprintStyle">
+		<LineStyle>
+			<color>7f0000ff</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Placemark>
+		<name>20051029stacked</name>
+		<styleUrl>#footprintStyle</styleUrl>
+		<LineString>
+			<coordinates>
+				-56.00417699999999,-1.5851978,0 -55.85089300000001,-1.5851179,0 -55.850664,-1.9568131,0 -56.003979,-1.9569117,0 -56.00417699999999,-1.5851978,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+</Document>
+</kml>
