@@ -1,0 +1,23 @@
+ENVI
+description = {
+  New spectral library file [Sat Mar 23 13:44:35 2013]}
+samples = 6
+lines   = 4
+bands   = 1
+header offset = 0
+file type = ENVI Spectral Library
+data type = 5
+interleave = bsq
+sensor type = Unknown
+byte order = 0
+wavelength units = Nanometers
+reflectance scale factor = 1.000000
+z plot range = {0.00, 10000.00}
+z plot titles = {Wavelength, Value}
+band names = {
+ Spectral Library}
+spectra names = {
+ Sand_X3940_Y2295, Region#1_X2572_Y2464, NPV_X287_Y1920, 
+ ScatterPlotExport_X2452_Y2550}
+wavelength = {
+  485.000000,  569.000000,  660.000000,  840.000000, 1676.000000, 2223.000000}
