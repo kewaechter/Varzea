@@ -1,7 +1,7 @@
 # 2015 Varzea Project Archive
 ### Contribution to _Land and resource use on the Amazon floodplain under evolving management systems and environmental change: Fish, forests, cattle, and settlements_, [LCLUC project record](https://lcluc.umd.edu/projects/land-and-resource-use-amazon-floodplain-under-evolving-management-systems-and-environmental)
 
-*See **Waechter_ProjectReport_20150822.pdf** for full write-up.*  
+*See [**Waechter_ProjectReport_20150822.pdf**](https://github.com/kewaechter/Varzea/blob/master/Waechter_ProjectReport_20150822.pdf) for full write-up.*  
 
 This archive contains substantive deliverables and scripts used to generate a replicable detailed classification of floodplain vegetation in the Lower Amazon River Floodplain. The methods developed for this project use Quickbird 2 and Landsat5 TM scenes from an area at the Tapajos River and Amazon River confluence near Santarem, Para, Brasil (see qb20051029.kml for footprint of Quickbird 2 mosaicked scenes). 
 
