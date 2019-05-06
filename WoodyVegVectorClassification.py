@@ -1,7 +1,5 @@
 ###########################################################################
 ##################         Katy Waechter                 ##################
-##################         GEOG3130                      ##################
-##################         Final Project Script          ##################
 ##################         GOAL: Take tree polygons      ##################
 ##################         and segmented objects to      ##################
 ##################         classify shrub and open       ##################
@@ -12,10 +10,78 @@ import arcpy
 import math
 import arcpy.sa
 arcpy.CheckOutExtension("spatial")
+
 ##SET WORKSPACE AND OVERWRITE AS NEEDED
 from arcpy import env
 env.workspace="E:\\3130\\final"
 env.overwriteOutput=True
+
+log.open("test.txt", "w+")
+log.print("This is the log for my shrub and open woodland classification in the varzea.\n")
+
+##define classes: points and polygons as trees and geographic units (GU)
+class Point:
+    "Common base class for all points"
+    ##attribute list
+    def __init__(self,coordX=0,coordY=0,name=""):
+        self.x=coordX
+        self.y=coordY
+        self.name=name
+
+
+class Polygon:
+    "Common base class for all polygons"
+    ##attribute list
+    def __init__(self,SHAPE))
+        self.shape= ...
+
+class Centroid(Point):
+    def __init__(self,coordX,coordY,name=""):
+        Point.__init__(self)
+        self.x=coordX
+        self.y=coordY
+        self.name=name
+    ##define method in a class
+    def CentroidDistance(self,pt):
+        distance = pow((self.x-pt.x),2)+pow((self.y-pt.y),2)
+        return math.sqrt(distance)
+
+class Trees(Polygon):
+    def __init__(self,points=[],area="",name=""):
+        Polygon.__init__(self,points)
+        self.area=SHAPE.area
+        self.name=name
+    def GetArea(self):
+        i=0
+        area=0
+        while i<len(self.points):
+            area=arcpy.getArea  #http://resources.arcgis.com/en/help/main/10.1/index.html#/PointGeometry/018z00000039000000/
+            i=i+1
+        return area
+    def GetSizeClass(self):
+        for tree in Trees:
+            if self.area<=12:
+                return "Small"
+            elif self.area<=30:
+                return "Medium"
+            else:
+                return: "Large"
+
+class GU(Polygon):
+    def __init__(self,points=[],area="",name=""): ##should area for polys be made as a sep fcn?
+        Polygon.__init__(self,points)
+        self.area=SHAPE.area
+        self.name=name
+
+
+##describe tree polygons
+trees="trees.shp"
+descTrees=arcpy.Describe(trees)
+log(print "Tree file data type is ", desc.dataType)
+log.close()
+
+
+
 ##CREATE PROCESSING AND OUTPUT FOLDERS
 if not os.path.exists("E:\\3130\\final\\Processing"):
     os.makedirs("E:\\3130\\final\\Processing")
