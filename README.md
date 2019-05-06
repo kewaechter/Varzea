@@ -15,16 +15,15 @@ Because the area of this study is extremely heterogeneous and very few cloud-fre
 * Top of atmosphere radiance converted to surface reflectance with atmospheric corrections addressed in _Waechter_GEOG3230_FinalReport.pdf_.  
 
 ## Object-Based Image Analysis
-* Use variety of object-based image processing to extract radiometric and pixel neighborhood differences into meaningful classification criteria. 
-
-*STEP 1*: Calculate a locally normalized roughness index and use in _Multiresolution Segmentation_ to generate image object primitives, distinguishing rough textures and smooth textures.  
-*STEP 2*: Control for edge effects and modifiable areal unit problem by experimenting with image object statistics:  
-* Normalized difference vegetation index, scale, compactness, shape/object dimensions ratio(s), spatial autocorrelation, urban built-up masking, variable and neighborhood brightnesses  
-*STEP 3*: Use delineated woody vegetation areas and spatial weighting to generate landscape patch objects (_segmented units_) for vegetation cover calculation. Use variable scale objects to calculate percent woody cover (proxy for cover using subclass cover rule).  
-* ArcPy script (_WoodyVegVectorClassification.py_) used to create ArcToolbox (_OBIA_Am.tbx_) for a short workflow for counting trees/woody vegetation objects within landscape patches (_descriptionpic.png_). Test data in _treeply.shp.zip_ and _SU.shp.zip_.  
-* More details in _Waechter_FinalReport.pdf_.  
-*STEP 4*: Use extracted endmember fraction (_shade_, _green vegetation_, _non-photosynthetic vegetation_) distributions to breakdown endmember fraction thresholds corresponding to desired lifeforms (e.g., shrub, tree, grass) in areas predominately covered by woody vegetation.  
-*STEP 5*: Combine _cover_ and _lifeform_ classifications for a combined detailed classification of floodplain vegetation. _See LCCS.vsd for classification scheme._    
+* Use variety of object-based image processing to extract radiometric and pixel neighborhood differences into meaningful classification criteria.   
+* STEP 1: Calculate a locally normalized roughness index and use in _Multiresolution Segmentation_ to generate image object primitives, distinguishing rough textures and smooth textures.  
+* STEP 2: Control for edge effects and modifiable areal unit problem by experimenting with image object statistics:   
+    * Normalized difference vegetation index, scale, compactness, shape/object dimensions ratio(s), spatial autocorrelation, urban built-up masking, variable and neighborhood brightnesses    
+* STEP 3: Use delineated woody vegetation areas and spatial weighting to generate landscape patch objects (_segmented units_) for vegetation cover calculation. Use variable scale objects to calculate percent woody cover (proxy for cover using subclass cover rule).   
+    * ArcPy script (_WoodyVegVectorClassification.py_) used to create ArcToolbox (_OBIA_Am.tbx_) for a short workflow for counting trees/woody vegetation objects within landscape patches (_descriptionpic.png_). Test data in _treeply.shp.zip_ and _SU.shp.zip_.  
+    * More details in _Waechter_FinalReport.pdf_.   
+* STEP 4: Use extracted endmember fraction (_shade_, _green vegetation_, _non-photosynthetic vegetation_) distributions to breakdown endmember fraction thresholds corresponding to desired lifeforms (e.g., shrub, tree, grass) in areas predominately covered by woody vegetation.   
+* STEP 5: Combine _cover_ and _lifeform_ classifications for a combined detailed classification of floodplain vegetation. _See LCCS.vsd for classification scheme._     
 
 ## Results
 
